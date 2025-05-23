@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Retailer Bulk Bonus  Flat Percent",
+    "conditions": {
+      "all": [
+        {
+          "name": "customer_category",
+          "operator": "equal_to",
+          "value": "Retailer"
+        },
+        {
+          "name": "region",
+          "operator": "equal_to",
+          "value": "East"
+        },
+        {
+          "name": "customer_classification",
+          "operator": "equal_to",
+          "value": "amber"
+        },
+        {
+          "name": "brand",
+          "operator": "equal_to",
+          "value": "BINGO"
+        },
+       
+        {
+          "name": "purchase_value",
+          "operator": "greater_than_or_equal_to",
+          "value": 1000.0
+        }
+      ]
+    },
+    "actions": [
+      {
+        "name": "apply_discount",
+        "params": {
+          "percentage": 10.0,
+          "qualifying_value": 1000,
+          "basis": "value",
+          "operator": ">="
+        }
+      }
+    ]
+  }
+]

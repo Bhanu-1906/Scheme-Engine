@@ -1,0 +1,21 @@
+[
+  {
+  "name": "Distributor Billed on Cash Slab Offer",
+  "conditions": {
+    "all": [
+      { "name": "customer_category", "operator": "equal_to", "value": "Distributor" },
+      { "name": "region", "operator": "equal_to", "value": "South" },
+      { "name": "customer_classification", "operator": "equal_to", "value": "green" },
+      { "name": "brand", "operator": "equal_to", "value": "MAGGI" }
+    ]
+  },
+  "actions": [
+    {
+      "name": "apply_slab_discount",
+      "params": {
+        "slabs": "[{\"from\": 5000.0, \"to\": 9999.0, \"type\": \"flat\", \"value\": 100.0}, {\"from\": 10000.0, \"to\": 19999.0, \"type\": \"flat\", \"value\": 300.0}, {\"from\": 20000.0, \"to\": 999999.0, \"type\": \"flat\", \"value\": 800.0}]"
+      }
+    }
+  ]
+}
+]

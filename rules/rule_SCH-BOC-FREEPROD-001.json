@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Green Distributors Buy 3 Get 1",
+    "conditions": {
+      "all": [
+        {
+          "name": "customer_category",
+          "operator": "equal_to",
+          "value": "Distributor"
+        },
+        {
+          "name": "region",
+          "operator": "equal_to",
+          "value": "North"
+        },
+        {
+          "name": "customer_classification",
+          "operator": "equal_to",
+          "value": "green"
+        },
+        {
+          "name": "brand",
+          "operator": "equal_to",
+          "value": "BINGO"
+        },
+        
+        {
+          "name": "purchase_quantity",
+          "operator": "greater_than_or_equal_to",
+          "value": 3
+        }
+      ]
+    },
+    "actions": [
+      {
+        "name": "apply_free_product",
+        "params": {
+          "product_code": "PRD-LAYS50",
+          "product_name": "Lays Chips 50g",
+          "qualifying_value":3,
+          "free_quantity": 1
+        }
+      }
+    ]
+  }
+]
